@@ -1,0 +1,38 @@
+header {
+    background: linear-gradient(#60289cc0
+    ,#60289cc0), url("/assets/img/bg.jpg") center/cover; 
+    // filter: brightness(50%);
+   
+
+    height: 800px;
+
+    color: $color1;
+    font-family: nunito;
+    
+    section {
+        text-align: center;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        padding-bottom: 40px;
+        letter-spacing: 4px;
+
+        h1 {
+           font-size: 6rem;
+           max-width: 800px;
+           margin: 0 auto;
+           font-weight: 700;
+           text-shadow: 4px 5px 2px rgba(0, 0, 0, 0.685);
+        }
+        h2{
+            font-size: 2.5rem;
+            font-weight: 700;
+            padding: 10px;
+        }
+    }
+
+    
+
+
+}

@@ -1,0 +1,44 @@
+nav{
+     height: 60px;
+     background-color: $color6;
+    font-family: nunito;
+    color: $color1;
+
+
+    div {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        height: 100%;
+        max-width: 1300px;
+        padding: 0px 20px;
+        margin: 0 auto;
+        span {
+            align-items: center;
+            margin: auto;
+        }
+
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        li {
+            padding: 0 20px;
+            letter-spacing: 1.5px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            &:hover{
+                color: $color5;  
+            }
+        }
+        .activate{
+           color: $color5;
+          } 
+    button:hover{
+              scale: 2rem;
+          }
+    }
+
+}
