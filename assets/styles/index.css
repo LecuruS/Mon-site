@@ -40,6 +40,28 @@ header section .buttun {
   margin: 0 auto;
 }
 
+footer {
+  background-color: #1A1423;
+}
+footer .footer {
+  color: whitesmoke;
+  height: 150px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+footer .footer a {
+  color: whitesmoke;
+}
+
 .mes-services {
   font-family: Nunito;
   padding: 20px;
@@ -86,7 +108,7 @@ header section .buttun {
   width: 270px;
   border-radius: 50%;
   position: absolute;
-  z-index: 100;
+  z-index: 1;
   -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.356);
           box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.356);
 }
@@ -162,7 +184,7 @@ header section .buttun {
 }
 
 .projet-container {
-  height: 1000px;
+  height: 1150px;
   background-color: #774C60;
 }
 .projet-container .git-container {
@@ -194,8 +216,8 @@ header section .buttun {
   width: 230px;
 }
 .projet-container .caroussel {
-  margin-top: 100px;
   position: relative;
+  height: 400px;
 }
 .projet-container .caroussel .btn {
   position: absolute;
@@ -208,7 +230,7 @@ header section .buttun {
   color: whitesmoke;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  top: 50%;
+  top: 65%;
 }
 .projet-container .caroussel #prev {
   left: 5px;
@@ -216,34 +238,98 @@ header section .buttun {
 .projet-container .caroussel #next {
   right: 5px;
 }
-.projet-container .caroussel ul {
+.projet-container .caroussel .slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  gap: 10px;
+  margin: 0 auto;
+  max-width: 1200px;
+  top: 50%;
+  height: 400px;
 }
-.projet-container .caroussel .slide {
-  width: 90px;
+.projet-container .caroussel .slide a {
+  cursor: pointer;
+}
+.projet-container .caroussel .slide a img {
+  position: absolute;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  border-radius: 10px;
+}
+.projet-container .caroussel .effect-1 {
+  z-index: 0;
+  left: 10%;
+  max-height: 100px;
+  opacity: 0.2;
+  width: 100px;
+}
+.projet-container .caroussel .effect-2 {
+  max-height: 200px;
+  z-index: 1;
+  opacity: 0.4;
+  left: 20%;
+  width: 200px;
+}
+.projet-container .caroussel .effect-3 {
+  max-height: 300px;
+  z-index: 2;
+  opacity: 0.6;
+  left: 35%;
+  width: 300px;
+}
+.projet-container .caroussel .effect-4 {
+  max-height: 400px;
+  z-index: 3;
+  opacity: 1;
+  width: 400px;
+  left: 50%;
+  -webkit-box-shadow: -2px 5px 16px 6px rgba(0, 0, 0, 0.349);
+          box-shadow: -2px 5px 16px 6px rgba(0, 0, 0, 0.349);
+}
+.projet-container .caroussel .effect-5 {
+  max-height: 300px;
+  z-index: 2;
+  width: 300px;
+  opacity: 0.6;
+  left: 65%;
+}
+.projet-container .caroussel .effect-6 {
+  max-height: 200px;
+  z-index: 1;
+  width: 200px;
+  left: 80%;
+  opacity: 0.4;
+}
+.projet-container .caroussel .effect-7 {
+  z-index: 0;
+  max-height: 100px;
+  width: 100px;
+  left: 90%;
   opacity: 0.2;
 }
-.projet-container .caroussel .slide img {
-  border-radius: 10px;
-  width: 100%;
+
+.about {
+  height: 800px;
+  background-color: #EACDC2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
-.projet-container .caroussel .active {
-  opacity: 1;
-  width: 600px;
+.about .photo {
+  width: 50%;
 }
-.projet-container .caroussel .preActive {
-  width: 300px;
-  opacity: 0.5;
+.about .photo img {
+  width: 50%;
 }
 
 nav {
@@ -253,7 +339,7 @@ nav {
   font-family: nunito;
   color: whitesmoke;
   position: fixed;
-  z-index: 100;
+  z-index: 1;
 }
 nav div {
   display: grid;
@@ -308,6 +394,7 @@ nav ul button:hover {
   font-weight: 700;
   font-family: nunito;
   border: none;
+  text-decoration: none;
 }
 .buttun:hover {
   scale: 1.1;
@@ -339,6 +426,45 @@ h2 {
   text-align: center;
   color: whitesmoke;
   letter-spacing: 3px;
+}
+
+.pop-up {
+  height: 200px;
+  text-align: left;
+  width: 700px;
+  padding: 20px;
+  background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
+  -webkit-box-shadow: -5px 5px 20px 2px #1A1423;
+          box-shadow: -5px 5px 20px 2px #1A1423;
+  border-radius: 15px 0 0 15px;
+  color: #1A1423;
+  position: absolute;
+  top: 15%;
+  left: 80%;
+  -webkit-transform: translateX(350px);
+          transform: translateX(350px);
+}
+.pop-up .pop-up-container {
+  position: relative;
+}
+.pop-up .pop-up-container i {
+  position: absolute;
+  right: 40px;
+  font-size: 1.2rem;
+  color: #1A1423;
+  cursor: pointer;
+}
+.pop-up .pop-up-container h4 {
+  font-family: nunito;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.pop-up .pop-up-container address {
+  font-family: nunito;
+  padding: 20px;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  line-height: 40px;
 }
 
 * {

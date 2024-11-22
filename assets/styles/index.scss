@@ -8,6 +8,7 @@
 @import "./layout/nav";
 @import "./components/buttun";
 @import "./components/title";
+@import "./layout/popup";
 
 
 *{
@@ -22,6 +23,5 @@
 
 
 body {
-
     height: 100vh;
 }

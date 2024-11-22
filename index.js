@@ -5,6 +5,9 @@ const anim = document.querySelectorAll(".anim");
 const nav = document.querySelector("nav");
 const buttons = document.querySelectorAll(".btn");
 const moves = document.querySelectorAll(".move");
+const popup = document.querySelector(".pop-up");
+const close = document.getElementById("closeBtn");
+const bouton = document.querySelector(".bouton");
 let lastScroll = 0;
 
 function Scroll() {
@@ -43,16 +46,48 @@ function Scroll() {
 }
 Scroll();
 
+let moveArray = [...moves];
 // Animation du caroussel
-
-buttons.forEach((button) => {
-  button.addEventListener("click", (e) => {
-    let moveArray = [...moves];
-    if (e.target.id === "next" ? 1 : -1) {
-      moveArray.unshift(moveArray.pop());
-    } else {
-      moveArray.push(moveArray.shift());
-    }
-    console.log(moveArray);
+function updateEvent() {
+  moveArray.forEach((element) => {
+    element.classList.remove("effect-1");
+    element.classList.remove("effect-2");
+    element.classList.remove("effect-3");
+    element.classList.remove("effect-4");
+    element.classList.remove("effect-5");
+    element.classList.remove("effect-6");
+    element.classList.remove("effect-7");
   });
+
+  moveArray.slice(0, 7).forEach((element, i) => {
+    element.classList.add(`effect-${i + 1}`);
+  });
+}
+
+function clickEvent() {
+  buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      if (e.target.id === "prev") {
+        moveArray.unshift(moveArray.pop());
+        updateEvent();
+      } else {
+        moveArray.push(moveArray.shift());
+        updateEvent();
+      }
+      updateEvent();
+    });
+  });
+}
+clickEvent();
+
+bouton.addEventListener("click", () => {
+  popup.style.transform = "translate(-50%)";
+  popup.style.opacity = 1;
 });
+
+close.addEventListener("click", (e) => {
+  console.log(e);
+
+  popup.remove();
+});
+console.log(bouton);
