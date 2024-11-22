@@ -1,0 +1,77 @@
+.projet-container{
+    height: 1000px;
+    background-color: $color4;
+
+    .git-container {
+        background: linear-gradient(#200c36d3
+        ,#200c36d3), url("/assets/img/purple-bg.jpg") center/cover; 
+        height: 300px;
+
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 350px;
+
+        .git {
+            text-align: center;
+            font-size: 1.3rem;
+            color: $color1;
+            a {
+                color: $color1;
+                font-size: 1.5rem;
+            }
+        }
+
+        .QRcode {
+            width: 230px;
+        }
+    }
+
+    .caroussel{
+        margin-top: 100px;
+        position: relative;
+        .btn{
+            position: absolute;
+            background: none;
+            border: none;
+            outline: none;
+            font-size: 2.6rem;
+            z-index: 150;
+            cursor: pointer;
+            color: $color1;
+            transform: translateY(-50%);
+            top: 50%;
+        }
+        #prev {
+            left: 5px;
+        }
+        #next {
+            right: 5px;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+        }
+        .slide{
+            width: 90px;
+            opacity: 0.2;
+            img{
+                border-radius: 10px;
+                width: 100%;
+            }
+        }
+        .active{
+            opacity: 1;
+            width: 600px;
+
+        }
+        .preActive {
+            width: 300px;
+            opacity: 0.5;
+        }
+    }
+}

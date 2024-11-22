@@ -18,20 +18,26 @@ header section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 40px;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
 }
 header section h1 {
   font-size: 6rem;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   font-weight: 700;
   text-shadow: 4px 5px 2px rgba(0, 0, 0, 0.685);
+  font-family: nunito;
+  letter-spacing: 3px;
 }
 header section h2 {
+  margin-bottom: 20px;
   font-size: 2.5rem;
-  font-weight: 700;
+}
+header section .buttun {
+  font-size: 1.4rem;
+  width: 250px;
   padding: 10px;
+  margin: 0 auto;
 }
 
 .mes-services {
@@ -87,15 +93,43 @@ header section h2 {
 .mes-services .webdesign {
   grid-template-columns: 70% 30%;
 }
-.mes-services .webdesign .anim {
+.mes-services .webdesign #Webanim {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 250px;
+  margin: 5px 0 5px 50px;
   border-radius: 0 30px 0 10px;
   background-image: linear-gradient(120deg, rgba(224, 195, 252, 0.6862745098) 0%, rgba(142, 197, 252, 0.6784313725) 100%);
   -webkit-box-shadow: -20px 20px 2px rgba(96, 40, 156, 0.7529411765);
           box-shadow: -20px 20px 2px rgba(96, 40, 156, 0.7529411765);
+  -webkit-transition: 1.5s ease;
+  transition: 1.5s ease;
+  -webkit-transform: translateX(-600px);
+          transform: translateX(-600px);
+  opacity: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.mes-services .webdesign #Webanim img {
+  width: 40%;
 }
 .mes-services .anim {
   font-size: 1.3rem;
   font-weight: 600;
+  -webkit-transition: 1.5s ease;
+  transition: 1.5s ease;
+  -webkit-transform: translateX(600px);
+          transform: translateX(600px);
+  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,15 +161,103 @@ header section h2 {
   margin: 60px auto 20px;
 }
 
+.projet-container {
+  height: 1000px;
+  background-color: #774C60;
+}
+.projet-container .git-container {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(32, 12, 54, 0.8274509804)), to(rgba(32, 12, 54, 0.8274509804))), url("/assets/img/purple-bg.jpg") center/cover;
+  background: linear-gradient(rgba(32, 12, 54, 0.8274509804), rgba(32, 12, 54, 0.8274509804)), url("/assets/img/purple-bg.jpg") center/cover;
+  height: 300px;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 350px;
+}
+.projet-container .git-container .git {
+  text-align: center;
+  font-size: 1.3rem;
+  color: whitesmoke;
+}
+.projet-container .git-container .git a {
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+.projet-container .git-container .QRcode {
+  width: 230px;
+}
+.projet-container .caroussel {
+  margin-top: 100px;
+  position: relative;
+}
+.projet-container .caroussel .btn {
+  position: absolute;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 2.6rem;
+  z-index: 150;
+  cursor: pointer;
+  color: whitesmoke;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+}
+.projet-container .caroussel #prev {
+  left: 5px;
+}
+.projet-container .caroussel #next {
+  right: 5px;
+}
+.projet-container .caroussel ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+.projet-container .caroussel .slide {
+  width: 90px;
+  opacity: 0.2;
+}
+.projet-container .caroussel .slide img {
+  border-radius: 10px;
+  width: 100%;
+}
+.projet-container .caroussel .active {
+  opacity: 1;
+  width: 600px;
+}
+.projet-container .caroussel .preActive {
+  width: 300px;
+  opacity: 0.5;
+}
+
 nav {
   height: 60px;
+  width: 100%;
   background-color: #1A1423;
   font-family: nunito;
   color: whitesmoke;
+  position: fixed;
+  z-index: 100;
 }
 nav div {
   display: grid;
-  grid-template-columns: 25% 75%;
+  grid-template-columns: 20% 80%;
   height: 100%;
   max-width: 1300px;
   padding: 0px 20px;
@@ -175,20 +297,48 @@ nav ul button:hover {
   scale: 2rem;
 }
 
+.buttun {
+  padding: 5px 20px;
+  border-radius: 8px;
+  color: whitesmoke;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.288);
+  background-color: rgb(0, 104, 0);
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: nunito;
+  border: none;
+}
+.buttun:hover {
+  scale: 1.1;
+  color: #2F195F;
+}
+
 .bouton {
   padding: 5px 20px;
   border-radius: 8px;
-  color: white;
+  color: whitesmoke;
+  background-color: #774C60;
   cursor: pointer;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.288);
-  background-color: rgb(0, 158, 0);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   font-family: nunito;
   border: none;
 }
 .bouton:hover {
   scale: 1.1;
+  color: #2F195F;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 30px;
+  font-family: nunito;
+  text-align: center;
+  color: whitesmoke;
+  letter-spacing: 3px;
 }
 
 * {

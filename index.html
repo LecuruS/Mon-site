@@ -26,7 +26,6 @@
             <li class="Mes-services-link">Mes services</li>
             <li class="Projets-link">Projets</li>
             <li class="A-propos-link">A propos</li>
-            <li class="Motivation-link">Motivation</li>
             <button class="bouton">Contact</button>
           </ul>
         </div>
@@ -34,6 +33,7 @@
       <section>
         <h1>Je suis Sandra Lecuru</h1>
         <h2>Développeuse web Junior</h2>
+        <button class="buttun">Download CV</button>
       </section>
     </header>
 
@@ -47,7 +47,7 @@
           />
           <h3>Développement Front-end</h3>
         </div>
-        <div class="anim">
+        <div class="anim" id="Devanim">
           <img src="/assets/img/Developpement Front-end.png" alt="" />
           <ul>
             <li>Maîtrise JS</li>
@@ -59,7 +59,7 @@
         </div>
       </div>
       <div class="first-part webdesign">
-        <div class="anim">
+        <div class="anim" id="Webanim">
           <img src="/assets/img/Webdesign.png" alt="" />
           <ul>
             <li>Intégration HTML CSS Saas</li>
@@ -85,7 +85,7 @@
           />
           <h3>Logo Design Skills</h3>
         </div>
-        <div class="anim">
+        <div class="anim" id="Logoanim">
           <img src="/assets/img/Logo-Design-Skills.png" alt="" />
           <ul>
             <li>Connaissances Photoshop</li>
@@ -96,10 +96,39 @@
       <button class="bouton">Contact</button>
     </section>
 
+    <section class="projet-container">
+      <h2>Projets</h2>
+      <div class="git-container">
+        <div class="git">
+          <h3>Vous pouvez retrouver tous mes projets sur mon Github</h3>
+          <a href="https://github.com/LecuruS?tab=repositories">Mes projets</a>
+        </div>
+          <img class="QRcode" src="./assets/img/QRcode.png" alt="QRcode">
+        </div>
+      </div>
+
+      <div class="caroussel">
+        <button class="btn" id="prev">&#10096;</button>
+        <button class="btn" id="next">&#10097;</button>
+        <ul>
+          <li class="slide"><img class="move" src="./assets/img/0.png" alt=""></li>
+          <li class="slide"><img class="move" src="./assets/img/1.png" alt=""></li>
+          <li class="slide preActive"><img class="move" src="./assets/img/2.png" alt=""></li>
+          <li class="slide active"><img class="move" src="./assets/img/3.png" alt=""></li>
+          <li class="slide preActive"><img class="move" src="./assets/img/4.png" alt=""></li>
+          <li class="slide"><img class="move" src="./assets/img/5.png" alt=""></li>
+          <li class="slide"><img class="move" src="./assets/img/6.png" alt=""></li>
+        </ul>
+      </div>
+
+    </section>
+
     <div class="footer">
       <a href="https://storyset.com/education"
         >Education illustrations by Storyset</a
       >
     </div>
+
+    <script src="./index.js"></script>
   </body>
 </html>
